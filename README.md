@@ -1,4 +1,4 @@
-# Python Backend Developer Task
+# Python Backend Developer Task (SD1)
 
 ## Objective
 
@@ -36,20 +36,31 @@ Develop the following endpoints:
 ### 4. Celery Integration
 
 Enhance the application with Celery/Celery beat to handle asynchronous tasks and periodic jobs. Use your creativity, examples could be:
+
 - A daily email to an admin email providing statistics of each day.
 
 - **Celery Setup:**
   - Configure Celery within the Django project (e.g., creating a `celery.py` file, setting up the broker such as Redis or RabbitMQ, and ensuring proper integration with Django’s settings).
   - Document the setup and running instructions for Celery in your `README.md`.
 
-### 5. Testing (Optional)
+### 5. Dockerizing the Application
+
+- Dockerize the Django application with Celery and Redis/RabbitMQ integration.
+- Use Docker Compose to set up the services for the Django app, Celery worker, and a message broker (Redis or RabbitMQ). Ensure proper service linkage and configuration for environment variables.
+
+### 6. Logging
+
+- Configure logging to capture general application events, Celery task execution, and weather API interactions.
+- Ensure logs are stored appropriately.
+
+### 7. Testing (Optional)
 
 - Write a basic suite of unit tests to verify:
   - The weather endpoint returns correct data and handles errors appropriately.
   - The history endpoint correctly records and returns search history.
   - Celery tasks (both asynchronous and periodic) are correctly queued and executed, with appropriate error handling and retries.
 
-### 6. Documentation
+### 8. Documentation
 
 Prepare a `README.md` that includes:
 
@@ -66,6 +77,7 @@ Prepare a `README.md` that includes:
 - A section on Celery:
   - Description of the asynchronous and periodic tasks.
   - Configuration details for the message broker (e.g., Redis or RabbitMQ).
+- Provide clear instructions for building and running the application with Docker and Docker Compose.
 - Optionally, a section on potential improvements (e.g., adding authentication, caching, or deployment strategies).
 
 ## Constraints & Guidelines
